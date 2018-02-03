@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
 
   totalWordProcessed = 0;
   totalRemainingWords = 0;
-  
+
   constructor() { }
 
   ngOnInit() {
