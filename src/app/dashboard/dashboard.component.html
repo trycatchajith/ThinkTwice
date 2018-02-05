@@ -1,141 +1,178 @@
-<div id="wrapper">
-  <div class="col-xs-3 col-md-2 sidebar-new" style="padding-left: 0px;!important">
-    <div style="text-align: center">
-      <h1>ThinkTwice</h1>
-    </div>
-    <div class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-                <li>
-                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Used Articles <span class="pull-right">{{totalUsedArticle}}</span> </a>
-                </li>
-                <li>
-                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Remaining Articles <span class="pull-right">{{totalRemaningArticle}}</span> </a>
-                </li>
-                <li>
-                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Words Processed <span class="pull-right">{{totalWordProcessed}}</span> </a>
-                </li>
-                <li>
-                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Remaining <span class="pull-right">{{totalRemainingWords}}</span> </a>
-                </li>
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 text-center header-logo">
+        <img src=".../../assets/images/logo-inverse.svg" width="98" title="logo" />
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-6 page-title">
+            <h4>Dashboard &raquo;</h4>
+          </div>
+          <div class="col-md-6 pull-right">
+            <ul class="header-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li class="header-btn"><a href="#" class="btn btn-primary btn-header-menu">Logout</a></li>
             </ul>
+            <!-- Responsive Menu -->
+            <div class="header-menu-bars">
+              <a data-toggle="collapse" href="#MobileMenu" role="button"><i class="fas fa-bars fa-2x"></i></a>
+            </div>
+            <div class="collapse" id="MobileMenu">
+              <div class="mobile-menu-container">
+                <ul class="mobile-menu">
+                  <li><a href="#" class="header-menu-black">Product</a></li>
+                  <li><a href="#" class="header-menu-black">Pricing</a></li>
+                  <li><a href="#" class="header-menu-black">About</a></li>
+                  <li><a href="#" class="header-menu-black">Webinars</a></li>
+                  <li><a href="#" class="header-menu-black">Buffer for Business</a></li>
+                  <li><a href="#" class="header-menu-black">Login</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Responsive Menu -->
+          </div>
         </div>
-        <!-- /.sidebar-collapse -->
-    </div>
-    <div id = "buy-article" class="side-bar-container" style="margin-top:100%;">
-      <button type="button" class="btn btn-primary btn-lg">Buy Articles</button>
+      </div>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-6 col-md-8">
-    <nav class="navbar navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <!-- /.navbar-header -->
-
-      <ul class="nav navbar-top-links navbar-right">
-        <div class="header-menu">
-          <strong class="pull-right menu-item" >Logout</strong>
-          <strong class="pull-right menu-item" >Blog</strong>
-        </div>
+</header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 content-left left-navigation">
+      <ul>
+        <li class="menu-title">Navigation</li>
+        <li class="active"><i class="fas fa-tachometer-alt"></i><a href="#">Dashboard</a></li>
+        <li><i class="fas fa-chart-bar"></i><a href="#">Widgets</a></li>
+        <li><i class="fas fa-address-card"></i><a href="#">Page Layouts</a></li>
+        <li class="menu-title">Components</li>
+        <li><i class="fas fa-envelope"></i><a href="#">Dashboard</a></li>
+        <li><i class="fas fa-industry"></i><a href="#">Widgets</a></li>
+        <li><i class="fas fa-calculator"></i><a href="#">Page Layouts</a></li>
+        <li><i class="fas fa-phone"></i><a href="#">Dashboard</a></li>
+        <li><i class="fas fa-folder-open"></i><a href="#">Widgets</a></li>
+        <li><i class="fas fa-globe"></i><a href="#">Page Layouts</a></li>
+        <li class="menu-title">Purchase Section</li>
+        <li class="active-button"><i class="fas fa-shopping-cart"></i><a href="#">Buy Articles</a></li>
       </ul>
-    </nav>
-    <div id="page-wrapper" style="margin-top: 50px;">
-
-      <!-- /.row -->
-      <div class="main-view">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="panel panel-default">
-              <div class="panel-body" style=" min-height: 350px;">
-
-              </div>
-            </div>
+    </div>
+    <!-- right Content -->
+    <div class="col-md-10 content-right">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="status-box">
+            <small>Used Articles</small>
+            <h3>{{totalUsedArticle}}</h3>
+            <img src=".../../assets/images/chart.png" />
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="row button-center">
-              <button type="button" class="btn btn-primary">Category</button>
-            </div>
-
-            <div class="row button-center">
-              <div class="checkbox">
-                      <input name="remember" type="checkbox" value="" class="check-box">
-              </div>
-            </div>
-
-            <div style="margin-top:40px; text-align: center;">
-              Effective Words
-            </div>
-
+        <div class="col-md-3">
+          <div class="status-box">
+            <small>Remaining Articles</small>
+            <h3>{{totalRemaningArticle}}</h3>
+            <img src=".../../assets/images/chart.png" />
           </div>
-
-          <div class="col-lg-4">
-            <div class="row button-center">
-              <button type="button" class="btn btn-primary">Type</button>
-            </div>
-
-            <div class="row button-center">
-              <div class="checkbox">
-                      <input name="remember" type="checkbox" value="" class="check-box">
-              </div>
-            </div>
-
-            <div style="margin-top:40px; text-align: center;">
-              SEO Words
-            </div>
-
-          </div>
-
-          <div class="col-lg-4">
-            <div class="row button-center">
-              <button type="button" class="btn btn-primary">Subtype</button>
-            </div>
-
-            <div class="row button-center">
-              <div class="checkbox">
-                      <input name="remember" type="checkbox" value="" class="check-box">
-              </div>
-            </div>
-
-            <div style="margin-top:40px; text-align: center;">
-              Engaging Content
-            </div>
-          </div>
-
         </div>
-
-        <div class="row" style="margin-top:50px;">
-          <div class="button-center">
-            <button type="button" class="btn btn-primary btn-lg">Analyse</button>
+        <div class="col-md-3">
+          <div class="status-box">
+            <small>Words Processed</small>
+            <h3>{{totalWordProcessed}}</h3>
+            <img src=".../../assets/images/chart.png" />
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="status-box">
+            <small>Remaining Words</small>
+            <h3>{{totalRemainingWords}}</h3>
+            <img src=".../../assets/images/chart.png" />
           </div>
         </div>
       </div>
-
+      <!-- Chart -->
+      <div class="container-fluid">
+        <div class="row analytics-chart">
+          <div class="col-md-12">
+            <h4>Analytics Overview</h4>
+          </div>
+          <div class="col-md-12 text-center">
+            <a href="#" class="btn btn-sm btn-outline-primary btn-header-menu">Past 24hrs</a>
+            <a href="#" class="btn btn-sm btn-outline-primary btn-header-menu">Past 7 Days</a>
+            <a href="#" class="btn btn-sm btn-outline-primary btn-header-menu">Past Month</a>
+          </div>
+          <div class="col-md-8 offset-md-2 text-center canvas-chart">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </div>
+      </div>
+      <!-- Chart Ends -->
+      <!-- Form -->
+      <div class="container-fluid analytics-form">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <form>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select class="form-control">
+                      <option>Category</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group text-center">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="analytics-form-check-label">
+                      Effective Words
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select class="form-control">
+                      <option>Type</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group text-center">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="analytics-form-check-label">
+                      SEO Words
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <select class="form-control">
+                      <option>Sub Type</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group text-center">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="analytics-form-check-label">
+                      Engaging Contents
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary text-center">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Form Ends -->
+    </div>
+    <!-- right Content Ends-->
   </div>
 </div>
-<!-- /#wrapper -->
-
-<!-- jQuery -->
-<script src="../../assets/vendor/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
-<script src="../../assets/vendor/metisMenu/metisMenu.min.js"></script>
-
-<!-- Morris Charts JavaScript -->
-<script src="../../assets/vendor/raphael/raphael.min.js"></script>
-<script src="../../assets/vendor/morrisjs/morris.min.js"></script>
-<script src="../../assets/data/morris-data.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="../../assets/dist/js/sb-admin-2.js"></script>
