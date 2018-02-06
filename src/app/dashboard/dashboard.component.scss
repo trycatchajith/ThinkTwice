@@ -12,6 +12,9 @@ body {
 a, a:link, a:hover, a:visited {
   text-decoration: none;
 }
+h4 {
+  font-size: 1.3em;
+}
 /* Header */
 header {
   position: fixed;
@@ -58,7 +61,7 @@ header .page-title {
 .left-navigation {
   margin-top: 60px;
   background-color: #262934;
-  height: auto;
+  height: 100%;
   padding: 0px;
 }
 .left-navigation ul {
@@ -81,6 +84,9 @@ header .page-title {
 }
 .left-navigation li.active-button {
   background-color: #00c853;
+  position: fixed;
+  bottom: 0;
+  width: 16.666667%;
 }
 .left-navigation li.active-button:hover {
   background-color: #479F4B;
@@ -124,6 +130,11 @@ header .page-title {
 .status-box img {
   width: 100%;
 }
+/* Page */
+.page-content {
+  border: 4px;
+  border: 1px solid #f1f1f1;
+}
 /* Analytics Chart */
 .analytics-chart {
   margin-top:40px;
@@ -144,6 +155,9 @@ header .page-title {
 }
 .analytics-form-check-label {
   padding-left: 2px;
+}
+.analytics-form-check-input {
+  margin-top: 6px;
 }
 .analytics-form button {
   cursor: pointer;
@@ -205,5 +219,18 @@ header .page-title {
   }
   .status-box {
     margin-top: 10px;
+  }
+}
+
+
+@media (max-height: 1023px)
+{
+  .sidebar-left{
+    min-height : 950px;
+  }
+}
+@media (max-height: 767px) {
+  .sidebar-left{
+    min-height : 710px;
   }
 }

@@ -1,22 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CommonService } from '../common.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  totalUsedArticle = 120100;
-  totalRemaningArticle = 10000;
-
-  totalWordProcessed = 25000;
-  totalRemainingWords = 75100;
-
-  constructor() { }
-
+  headerText:string;
+  constructor(private commonService:CommonService) { }
   ngOnInit() {
-
+    console.log("am here u baby");
+    this.commonService.cast.subscribe(headerText=> this.headerText = headerText);
+    this.commonService.changeHeader('Dashboard');
   }
-
 }
