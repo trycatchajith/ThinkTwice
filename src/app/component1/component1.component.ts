@@ -9,7 +9,7 @@ export class Component1Component implements OnInit {
 
   constructor(private commonService:CommonService) { }
   ngOnInit() {
-     this.commonService.changeHeader("Component");
+     this.commonService.changeHeader("Page Layout");
   }
 
 }

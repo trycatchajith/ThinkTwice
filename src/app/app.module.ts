@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { DashMainComponent } from './dash-main/dash-main.component';
 import { Component1Component } from './component1/component1.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { MailComponent } from './mail/mail.component';
+import { WidgetComponent } from './widget/widget.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { ProgressbarComponent } from './progressbar/progressbar.component';
     HomeComponent,
     DashMainComponent,
     Component1Component,
-    ProgressbarComponent
+    ProgressbarComponent,
+    MailComponent,
+    WidgetComponent
   ],
   imports: [
     BrowserModule,

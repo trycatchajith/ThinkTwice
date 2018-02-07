@@ -8,6 +8,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashMainComponent } from './dash-main/dash-main.component';
 import { Component1Component } from './component1/component1.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component'
+import { MailComponent } from './mail/mail.component';
+import { WidgetComponent } from './widget/widget.component';
+
 const routes: Routes = [
   {path: '',component: HomeComponent},
   {
@@ -20,8 +23,8 @@ const routes: Routes = [
         component: DashboardComponent,
         children: [
           { path: '',component: DashMainComponent},
-          { path: 'mail',component: Component1Component},
-          { path: 'widgets',component: Component1Component},
+          { path: 'mail',component: MailComponent},
+          { path: 'widgets',component: WidgetComponent},
           { path: 'layout',component: Component1Component},
           { path: 'submit',component: ProgressbarComponent},
           { path: 'analytics', redirectTo: '', pathMatch: 'full' }
