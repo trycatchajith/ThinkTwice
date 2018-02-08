@@ -13,17 +13,32 @@
               <ul class="header-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Blog</a></li>
-                <li class="header-btn"><a href="#" class="btn btn-primary btn-header-menu">Logout</a></li>
+                <li class="header-btn"><a href="./" class="btn btn-primary btn-header-menu">Logout</a></li>
               </ul>
               <!-- Responsive Menu -->
               <div class="header-menu-bars">
-                <a data-toggle="collapse" href="#MobileMenu" role="button"><i class="fas fa-bars fa-2x"></i></a>
+                <a data-toggle="collapse" id="RightMenuButton" href="#MobileMenu" role="button" aria-expanded="false" aria-controls="MobileMenu"><i class="fas fa-bars fa-2x"></i></a>
               </div>
               <div class="collapse" id="MobileMenu">
                 <div class="mobile-menu-container">
                   <ul class="mobile-menu">
                     <li><a href="#" class="header-menu-black">Home</a></li>
                     <li><a href="#" class="header-menu-black">Blog</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header-menu-bars-left">
+                <a data-toggle="collapse" href="#MobileMenuLeft" role="button" aria-expanded="false" aria-controls="MobileMenuLeft"><i class="fas fa-bars fa-2x"></i></a>
+              </div>
+              <div class="collapse" id="MobileMenuLeft">
+                <div class="mobile-menu-container">
+                  <ul class="mobile-menu">
+                    <li><a href="#" class="header-menu-black">Dashboard</a></li>
+                    <li><a href="#" class="header-menu-black">Widgets</a></li>
+                    <li><a href="#" class="header-menu-black">Page Layouts</a></li>
+                    <li><a href="#" class="header-menu-black">Mail</a></li>
+                    <li><a href="#" class="header-menu-black">Widgets</a></li>
+                    <li><a href="#" class="header-menu-black">Page Layouts</a></li>
                   </ul>
                 </div>
               </div>
@@ -56,3 +71,22 @@
       <!-- right Content Ends-->
     </div>
   </div>
+  <script>
+  $(function() {
+  var menuVisible = false;
+  $('#RightMenuButton').click(function() {
+    alert("Test");
+    if (menuVisible) {
+      $('#MobileMenu').css({'display':'none'});
+      menuVisible = false;
+      return;
+    }
+    $('#MobileMenu').css({'display':'block'});
+    menuVisible = true;
+  });
+  $('#MobileMenu').click(function() {
+    $(this).css({'display':'none'});
+    menuVisible = false;
+  });
+});
+</script>

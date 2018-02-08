@@ -175,6 +175,16 @@ header .page-title {
 .header-menu-bars a,.header-menu-bars a:hover, .header-menu-bars a:visited, .header-menu-bars a:active {
   color: #1b1b1b;
 }
+.header-menu-bars-left {
+  z-index: 1000;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  display: none;
+}
+.header-menu-bars-left a,.header-menu-bars-left a:hover, .header-menu-bars-left a:visited, .header-menu-bars-left a:active {
+  color: #1b1b1b;
+}
 #MobileMenu {
   right: 15px;
   top:15px;
@@ -182,6 +192,23 @@ header .page-title {
   z-index: 999;
 }
 #MobileMenu ul {
+  list-style: none;
+  padding: 0px;
+}
+.mobile-menu li {
+  text-align: left;
+  padding: 20px 25px 20px 30px;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+#MobileMenuLeft {
+  left: 15px;
+  top:15px;
+  position: absolute;
+  z-index: 999;
+}
+
+#MobileMenuLeft ul {
   list-style: none;
   padding: 0px;
 }
@@ -203,6 +230,9 @@ header .page-title {
     .header-menu-bars  {
       display: block;
     }
+    .header-menu-bars-left  {
+      display: block;
+    }
     .left-navigation {
       display: none;
     }
@@ -213,8 +243,12 @@ header .page-title {
 @media (max-width: 767px) {
   header .page-title {
     padding-top: 10px;
+    text-align: center;
   }
   .header-menu-bars  {
+    top:-30px;
+  }
+  .header-menu-bars-left  {
     top:-30px;
   }
   .status-box {
