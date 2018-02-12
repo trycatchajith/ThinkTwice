@@ -45,7 +45,7 @@ const routes: Routes = [
   },
   {
     path:'signup/dashboard',pathMatch: 'full', redirectTo: 'dashboard'
-  }
+  },
   {
     path: 'signup',component: SignupComponent
   }
