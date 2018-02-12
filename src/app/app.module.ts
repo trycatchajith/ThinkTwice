@@ -11,7 +11,8 @@ import { Component1Component } from './component1/component1.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { MailComponent } from './mail/mail.component';
 import { WidgetComponent } from './widget/widget.component';
-
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { WidgetComponent } from './widget/widget.component';
     Component1Component,
     ProgressbarComponent,
     MailComponent,
-    WidgetComponent
+    WidgetComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

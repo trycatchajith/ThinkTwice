@@ -1,0 +1,31 @@
+/* Login Page */
+.login {
+  background-color: #F6F6F6;
+}
+.login-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,.1);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.1);
+}
+.login-text {
+  font-weight: 300;
+  color: #7d7d8e;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.rect-input-form {
+  border:1px solid #ccc;
+  border-radius: 0;
+}
+.rect-input-form:focus {
+      border-color: #ccc;
+      outline: 0;
+      box-shadow: none;
+}
