@@ -35,8 +35,17 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'login',component: LoginComponent  
+    path: 'login',component: LoginComponent
   },
+  {
+    path: 'login/signup',pathMatch: 'full', redirectTo: 'signup'
+  },
+  {
+    path: 'login/dashboard',pathMatch: 'full', redirectTo: 'dashboard'
+  },
+  {
+    path:'signup/dashboard',pathMatch: 'full', redirectTo: 'dashboard'
+  }
   {
     path: 'signup',component: SignupComponent
   }
